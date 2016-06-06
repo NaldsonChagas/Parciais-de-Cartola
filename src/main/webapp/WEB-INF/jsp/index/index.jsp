@@ -22,39 +22,37 @@
 	</div>
 	</header>
 
-	<section class="col-md-10 center">
-	<h3 class="h3 text-center">Confira as parciais de todos os times
-		da liga</h3>
-	<br />
+	<div class="col-md-10 center">
+		<section>
+		<h3 class="h3 text-center">Confira as parciais de todos os times
+			da liga</h3>
+		<br />
 
-	<table class="table talbe-striped center">
-		<thead>
-			<tr>
-				<th>Escudo</th>
-				<th>Time</th>
-				<th>Cartoleiro</th>
-				<th>Pontuação</th>
-			</tr>
-		</thead>
-
-		<tbody>
-			<c:forEach var="t" items="${time}">
+		<table class="table talbe-striped center">
+			<thead>
 				<tr>
-					<td><img src="${t.escudoSvg}"
-						width="80px" /></td>
-					<td>${t.nome}</td>
-					<td>${t.nomeJogador}</td>
-					<td>${t.pontos}</td>
+					<th>Escudo</th>
+					<th>Time</th>
+					<th>Cartoleiro</th>
+					<th>Pontuação</th>
 				</tr>
-			</c:forEach>
-		</tbody>
-	</table>
-	</section>
+			</thead>
 
-	<footer>
-	<h4 class="text-center h4" style="line-height: 35px">
-		Desenvolvido por <strong><u>Naldson</u></strong>
-	</h4>
-	</a> </footer>
+			<tbody>
+				<c:forEach var="t" items="${time}">
+					<tr>
+						<td><img src="${t.escudoSvg}" width="65px" /></td>
+						<td><strong>${t.nome}</strong></td>
+						<td><strong>${t.nomeJogador}</strong></td>
+						<td><strong style="color: green;">${t.pontos}</strong></td>
+					</tr>
+				</c:forEach>
+			</tbody>
+		</table>
+		</section>
+		<h4 class="text-muted h4">
+			Desenvolvido por: <u>Naldson</u>
+		</h4>
+	</div>
 </body>
 </html>

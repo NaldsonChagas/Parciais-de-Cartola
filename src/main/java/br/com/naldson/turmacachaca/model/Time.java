@@ -8,14 +8,12 @@ public class Time {
 	private String escudoSvg;
 	private String nomeJogador;
 	private double pontos;
-	private Double patrimonio;
 	private List<String> jogadores = new ArrayList<String>(12);
 
-	public Time(String nome, String escudoSvg, String nomeJogador, Double patrimonio) {
+	public Time(String nome, String escudoSvg, String nomeJogador) {
 		this.nome = nome;
 		this.escudoSvg = escudoSvg;
 		this.nomeJogador = nomeJogador;
-		this.patrimonio = patrimonio;
 	}
 
 	public String getNome() {
@@ -36,10 +34,6 @@ public class Time {
 
 	public void setPontos(double pontos) {
 		this.pontos = pontos;
-	}
-
-	public Double getPatrimonio() {
-		return patrimonio;
 	}
 
 	public List<String> getJogadores() {

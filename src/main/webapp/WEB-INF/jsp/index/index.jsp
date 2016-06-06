@@ -38,42 +38,15 @@
 		</thead>
 
 		<tbody>
-			<tr>
-				<td><img src="<c:url value='/public/img/logo.png' />"
-					width="90px" /></td>
-				<td>Nome do time</td>
-				<td>Nome do cartoleiro</td>
-				<td>Pontuação</td>
-			</tr>
-			<tr>
-				<td><img src="<c:url value='/public/img/logo.png' />"
-					width="90px" /></td>
-				<td>Time aqui</td>
-				<td>Nome do cartoleiro</td>
-				<td>Pontuação</td>
-			</tr>
-			<tr>
-				<td><img src="<c:url value='/public/img/logo.png' />"
-					width="90px" /></td>
-				<td>Time aqui</td>
-				<td>Nome do cartoleiro</td>
-				<td>Pontuação</td>
-			</tr>
-			<tr>
-				<td><img src="<c:url value='/public/img/logo.png' />"
-					width="90px" /></td>
-				<td>Time aqui</td>
-				<td>Nome do cartoleiro</td>
-				<td>Pontuação</td>
-			</tr>
-			<tr>
-				<td><img src="<c:url value='/public/img/logo.png' />"
-					width="90px" /></td>
-				<td>Time aqui</td>
-				<td>Nome do cartoleiro</td>
-				<td>Pontuação</td>
-			</tr>
-
+			<c:forEach var="t" items="${time}">
+				<tr>
+					<td><img src="${t.escudoSvg}"
+						width="80px" /></td>
+					<td>${t.nome}</td>
+					<td>${t.nomeJogador}</td>
+					<td>${t.pontos}</td>
+				</tr>
+			</c:forEach>
 		</tbody>
 	</table>
 	</section>

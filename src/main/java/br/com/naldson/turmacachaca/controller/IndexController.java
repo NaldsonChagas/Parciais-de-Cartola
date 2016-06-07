@@ -14,6 +14,7 @@ import br.com.caelum.vraptor.Result;
 import br.com.naldson.turmacachaca.model.Jogadores;
 import br.com.naldson.turmacachaca.model.Liga;
 import br.com.naldson.turmacachaca.model.Time;
+import br.com.naldson.turmacachaca.util.CalculaParciais;
 import br.com.naldson.turmacachaca.util.GeraTimes;
 import br.com.naldson.turmacachaca.util.PegaJsonTimes;
 
@@ -22,13 +23,15 @@ public class IndexController {
 
 	private PegaJsonTimes jsonTimes;
 	private Liga liga;
-	private ArrayList<Time> time = new ArrayList<>();
+	private ArrayList<Time> times = new ArrayList<>();
 	private Result result;
+	private CalculaParciais parciais;
 
 	@Inject
-	public IndexController(PegaJsonTimes jsonTimes, Liga liga, Result result) {
+	public IndexController(PegaJsonTimes jsonTimes, Liga liga, CalculaParciais parciais, Result result) {
 		this.jsonTimes = jsonTimes;
 		this.liga = liga;
+		this.parciais = parciais;
 		this.result = result;
 	}
 
@@ -46,8 +49,21 @@ public class IndexController {
 		jsonTimes.geraJson();
 		for (JSONObject j : jsonTimes.getJsons()) {
 			ArrayList<Jogadores> jogadores = GeraTimes.adicionaJogadores(j);
-			time.add(GeraTimes.converteJsonParaTimes(j, jogadores));
+			Time time = GeraTimes.converteJsonParaTimes(j, jogadores);
+			
+			if(parciais.pegaParciais()) {
+				parciais.calculaParciais(time);
+				time.setPontos(parciais.getParcial());
+			} else {
+				result.redirectTo(this).index2();
+			}
+			times.add(time);
 		}
-		result.include("time", time);
+		result.include("time", times);
+	}
+
+	@Path("mercado-indisponivel")
+	private void index2() {
+		
 	}
 }

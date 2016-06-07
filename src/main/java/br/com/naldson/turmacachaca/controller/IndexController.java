@@ -11,6 +11,7 @@ import br.com.caelum.vraptor.Controller;
 import br.com.caelum.vraptor.Get;
 import br.com.caelum.vraptor.Path;
 import br.com.caelum.vraptor.Result;
+import br.com.naldson.turmacachaca.model.Jogadores;
 import br.com.naldson.turmacachaca.model.Liga;
 import br.com.naldson.turmacachaca.model.Time;
 import br.com.naldson.turmacachaca.util.GeraTimes;
@@ -44,7 +45,8 @@ public class IndexController {
 		}
 		jsonTimes.geraJson();
 		for (JSONObject j : jsonTimes.getJsons()) {
-			time.add(GeraTimes.converteJsonParaTimes(j));
+			ArrayList<Jogadores> jogadores = GeraTimes.adicionaJogadores(j);
+			time.add(GeraTimes.converteJsonParaTimes(j, jogadores));
 		}
 		result.include("time", time);
 	}

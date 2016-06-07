@@ -3,10 +3,12 @@ package br.com.naldson.turmacachaca.util;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
 public class PegaJsonTimes {
@@ -18,16 +20,23 @@ public class PegaJsonTimes {
 		this.url.add(url);
 	}
 
-	public void geraJson() throws IOException {
+	public void geraJson() throws JSONException, IOException {
 		for (int i = 0; i < url.size(); i++) {
-			URL url = new URL(this.url.get(i));
-			BufferedReader in = new BufferedReader(new InputStreamReader(url.openStream()));
+			URL url;
+			try {
+				url = new URL(this.url.get(i));
 
-			String inputLine;
+				BufferedReader in = new BufferedReader(new InputStreamReader(url.openStream()));
 
-			while ((inputLine = in.readLine()) != null) {
-				json = new JSONObject(inputLine);
-				jsons.add(json);
+				String inputLine;
+
+				while ((inputLine = in.readLine()) != null) {
+					json = new JSONObject(inputLine);
+					jsons.add(json);
+				}
+
+			} catch (MalformedURLException e) {
+				System.out.println("Esta API não é valida");
 			}
 		}
 	}

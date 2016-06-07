@@ -22,7 +22,7 @@
 	</div>
 	</header>
 
-	<div class="col-md-10 center">
+	<div class="col-md-11 center">
 		<section>
 		<h3 class="h3 text-center">Confira as parciais de todos os times
 			da liga</h3>

@@ -1,5 +1,6 @@
 package br.com.naldson.turmacachaca.util;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import org.json.JSONArray;
@@ -18,8 +19,7 @@ public class CalculaParciais {
 			PegaJsonJogadores apiJsonJogadores = new PegaJsonJogadores("https://api.cartolafc.globo.com/atletas/pontuados");
 			JSONObject jsonJogadores = apiJsonJogadores.geraJson();
 			array = jsonJogadores.getJSONArray("atletas");
-		} catch (Exception e) {
-			e.printStackTrace();
+		} catch (FileNotFoundException e) {
 			return false;
 		}
 		return true;

@@ -63,7 +63,7 @@ public class IndexController {
 	}
 
 	@Path("mercado-indisponivel")
-	private void index2() {
+	public void index2() {
 
 	}
 }

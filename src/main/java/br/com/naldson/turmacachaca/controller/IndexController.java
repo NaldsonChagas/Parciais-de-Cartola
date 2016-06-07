@@ -50,8 +50,8 @@ public class IndexController {
 		for (JSONObject j : jsonTimes.getJsons()) {
 			ArrayList<Jogadores> jogadores = GeraTimes.adicionaJogadores(j);
 			Time time = GeraTimes.converteJsonParaTimes(j, jogadores);
-			
-			if(parciais.pegaParciais()) {
+
+			if (parciais.pegaParciais()) {
 				parciais.calculaParciais(time);
 				time.setPontos(parciais.getParcial());
 			} else {
@@ -64,6 +64,6 @@ public class IndexController {
 
 	@Path("mercado-indisponivel")
 	private void index2() {
-		
+
 	}
 }

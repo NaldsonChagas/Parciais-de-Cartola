@@ -14,9 +14,9 @@ public class CalculaParciais {
 	private double parcial = 0;
 
 	public boolean pegaParciais() throws IOException {
-		PegaJsonJogadores apiJsonJogadores = new PegaJsonJogadores("https://api.cartolafc.globo.com/atletas/pontuados");
-		JSONObject jsonJogadores = apiJsonJogadores.geraJson();
 		try {
+			PegaJsonJogadores apiJsonJogadores = new PegaJsonJogadores("https://api.cartolafc.globo.com/atletas/pontuados");
+			JSONObject jsonJogadores = apiJsonJogadores.geraJson();
 			array = jsonJogadores.getJSONArray("atletas");
 		} catch (Exception e) {
 			e.printStackTrace();

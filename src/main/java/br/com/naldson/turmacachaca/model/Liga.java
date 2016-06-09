@@ -11,7 +11,7 @@ public class Liga {
 	}
 
 	public void adicionaTimes() {
-		/*times.add("http://scoutsaovivo.appspot.com/gettarget.php?a=ssc-napoleza");
+		times.add("http://scoutsaovivo.appspot.com/gettarget.php?a=ssc-napoleza");
 		times.add("http://scoutsaovivo.appspot.com/gettarget.php?a=Turmada-resenha-fc");
 		times.add("http://scoutsaovivo.appspot.com/gettarget.php?a=IkarosGrill-FC");
 		times.add("http://scoutsaovivo.appspot.com/gettarget.php?a=FEC18-EC");
@@ -21,7 +21,7 @@ public class Liga {
 		times.add("http://scoutsaovivo.appspot.com/gettarget.php?a=six-nations-fc");
 		times.add("http://scoutsaovivo.appspot.com/gettarget.php?a=elieel-fc");
 		times.add("http://scoutsaovivo.appspot.com/gettarget.php?a=25-de-dezembro-f-c");
-		times.add("http://scoutsaovivo.appspot.com/gettarget.php?a=denismengao");*/
+		times.add("http://scoutsaovivo.appspot.com/gettarget.php?a=denismengao");
 		times.add("http://scoutsaovivo.appspot.com/gettarget.php?a=atletic-de-esparta");
 	}
 

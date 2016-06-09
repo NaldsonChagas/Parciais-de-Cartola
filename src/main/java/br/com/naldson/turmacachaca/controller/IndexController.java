@@ -23,7 +23,7 @@ public class IndexController {
 
 	private PegaJsonTimes jsonTimes;
 	private Liga liga;
-	private ArrayList<Time> times = new ArrayList<>();
+	private ArrayList<Time> times = new ArrayList<Time>();
 	private Result result;
 	private CalculaParciais parciais;
 
@@ -38,7 +38,7 @@ public class IndexController {
 	@Deprecated
 	public IndexController() {
 	}
-
+/*
 	@Path(value = "/", priority = 1)
 	@Get
 	public void index() throws IOException {
@@ -59,8 +59,8 @@ public class IndexController {
 			}
 			times.add(time);
 		}
-		result.include("time", times);
-	}
+		result.include("times", times);
+	}*/
 
 	@Path("mercado-indisponivel")
 	public void index2() {

@@ -39,7 +39,7 @@
 			</thead>
 
 			<tbody>
-				<c:forEach var="t" items="${time}">
+				<c:forEach var="t" items="${times}">
 					<tr>
 						<td><img src="${t.escudoSvg}" width="65px" /></td>
 						<td><strong>${t.nome}</strong></td>

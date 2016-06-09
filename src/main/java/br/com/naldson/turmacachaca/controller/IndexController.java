@@ -38,7 +38,7 @@ public class IndexController {
 	@Deprecated
 	public IndexController() {
 	}
-/*
+
 	@Path(value = "/", priority = 1)
 	@Get
 	public void index() throws IOException {
@@ -60,7 +60,7 @@ public class IndexController {
 			times.add(time);
 		}
 		result.include("times", times);
-	}*/
+	}
 
 	@Path("mercado-indisponivel")
 	public void index2() {

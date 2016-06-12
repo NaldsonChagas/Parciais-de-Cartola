@@ -12,18 +12,18 @@ public class Liga {
     }
 
     public void adicionaTimes() {
-        times.add("http://scoutsaovivo.appspot.com/gettarget.php?a=ssc-napoleza");
-        times.add("http://scoutsaovivo.appspot.com/gettarget.php?a=Turmada-resenha-fc");
-        times.add("http://scoutsaovivo.appspot.com/gettarget.php?a=IkarosGrill-FC");
-        times.add("http://scoutsaovivo.appspot.com/gettarget.php?a=FEC18-EC");
-        times.add("http://scoutsaovivo.appspot.com/gettarget.php?a=Rio-Negro-Fcm");
-        times.add("http://scoutsaovivo.appspot.com/gettarget.php?a=Spartacus-1000");
-        times.add("http://scoutsaovivo.appspot.com/gettarget.php?a=Real-mdg-fc");
-        times.add("http://scoutsaovivo.appspot.com/gettarget.php?a=six-nations-fc");
-        times.add("http://scoutsaovivo.appspot.com/gettarget.php?a=elieel-fc");
-        times.add("http://scoutsaovivo.appspot.com/gettarget.php?a=25-de-dezembro-f-c");
-        times.add("http://scoutsaovivo.appspot.com/gettarget.php?a=denismengao");
-        times.add("http://scoutsaovivo.appspot.com/gettarget.php?a=atletic-de-esparta");
+        times.add("https://api.cartolafc.globo.com/time/ssc-napoleza");
+        times.add("https://api.cartolafc.globo.com/time/Turmada-resenha-fc");
+        times.add("https://api.cartolafc.globo.com/time/IkarosGrill-FC");
+        times.add("https://api.cartolafc.globo.com/time/FEC18-EC");
+        times.add("https://api.cartolafc.globo.com/time/Rio-Negro-Fcm");
+        times.add("https://api.cartolafc.globo.com/time/Spartacus-1000");
+        times.add("https://api.cartolafc.globo.com/time/Real-mdg-fc");
+        times.add("https://api.cartolafc.globo.com/time/six-nations-fc");
+        times.add("https://api.cartolafc.globo.com/time/elieel-fc");
+        times.add("https://api.cartolafc.globo.com/time/25-de-dezembro-f-c");
+        times.add("https://api.cartolafc.globo.com/time/denismengao");
+        times.add("https://api.cartolafc.globo.com/time/atletic-de-esparta");
     }
 
     public List<String> getTimes() {

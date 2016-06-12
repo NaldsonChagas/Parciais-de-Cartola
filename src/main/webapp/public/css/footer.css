@@ -10,3 +10,7 @@ footer h4 {
     position:relative;
     top: 10px;
 }
+
+footer a {
+    color:#fff;
+}

@@ -25,11 +25,9 @@ public class CalculaParciais {
     }
 
     public void calculaParciais(Time time) {
-        JSONObject jsonObject = this.json;
-
         for (Jogadores j : time.getJogadores()) {
-            if (jsonObject.has(j.getId().toString())) {
-                JSONObject atleta = (JSONObject) jsonObject.get(j.getId().toString());
+            if (json.has(j.getId().toString())) {
+                JSONObject atleta = (JSONObject) json.get(j.getId().toString());
 
                 double pontos = Double.valueOf(atleta.get("pontuacao").toString());
                 this.parcial += pontos;

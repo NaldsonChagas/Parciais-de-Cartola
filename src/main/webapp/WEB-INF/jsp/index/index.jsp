@@ -29,7 +29,7 @@
                 da liga</h3>
             <br />
 
-            <table class="table table-hover center table-responsive">
+            <table class="table center table-responsive">
                 <thead>
                     <tr>
                         <th>Escudo</th>
@@ -51,11 +51,9 @@
                 </tbody>
             </table>
         </section>
-    </div>
-    <footer>
-        <h4 class="h4" style="color: white">
+        <h4 class="h5 text-muted">
             Desenvolvido por: <a href="mailto:naldson.bc@gmail.com"><u>Naldson Chagas</u></a>
         </h4>
-    </footer>
+    </div>
 </body>
 </html>

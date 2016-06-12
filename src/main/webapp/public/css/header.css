@@ -1,19 +1,19 @@
 .top-line {
-	width: 100%;
-	height: 7px;
-	background-color: #FF890E;
+    width: 100%;
+    height: 7px;
+    background-color: #FF890E;
 }
 
 header {
-	width: 100%;
-	min-height: 100px;
-	max-height: auto;
-	background-color: #fff;
-	box-shadow: 0px 1px 0px 0px #ccc;
-	background-color: #fff;
+    width: 100%;
+    min-height: 100px;
+    max-height: auto;
+    background-color: #fff;
+    box-shadow: 0px 1px 0px 0px #ccc;
+    background-color: #fff;
 }
 
 section {
-	background-color: #fff;
-	position: relative;
+    background-color: #fff;
+    position: relative;
 }

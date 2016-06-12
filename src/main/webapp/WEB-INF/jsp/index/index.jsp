@@ -8,6 +8,7 @@
               href="<c:url value='/public/bootstrap/css/bootstrap.min.css' />" />
         <link rel="stylesheet" type="text/css"
               href="<c:url value='/public/css/style.css' />" />
+        <link rel="icon" href="<c:url value='/public/img/favicon.ico' />">
         <title>Turma da Cachaça - Liga Cartola FC</title>
     </head>
     <body>
@@ -28,7 +29,7 @@
                 da liga</h3>
             <br />
 
-            <table class="table talbe-striped center">
+            <table class="table table-hover center table-responsive">
                 <thead>
                     <tr>
                         <th>Escudo</th>
@@ -41,7 +42,7 @@
                 <tbody>
                     <c:forEach var="t" items="${times}">
                         <tr>
-                            <td><img src="${t.escudoSvg}" width="65px" /></td>
+                            <td><img src="${t.escudoSvg}" width="50px" /></td>
                             <td><strong>${t.nome}</strong></td>
                             <td><strong>${t.nomeJogador}</strong></td>
                             <td><strong style="color: green;">${t.formatPontos}</strong></td>
@@ -50,9 +51,11 @@
                 </tbody>
             </table>
         </section>
-        <h4 class="text-muted h4">
+    </div>
+    <footer>
+        <h4 class="h4" style="color: white">
             Desenvolvido por: <u>Naldson</u>
         </h4>
-    </div>
+    </footer>
 </body>
 </html>

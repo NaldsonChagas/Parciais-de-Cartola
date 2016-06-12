@@ -1,0 +1,12 @@
+footer {
+    background-color: #FF890E;
+    width:100%;
+    position:relative;
+    min-height: 50px;
+}
+
+footer h4 {
+    text-align: center;
+    position:relative;
+    top: 10px;
+}

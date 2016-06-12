@@ -12,36 +12,37 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class PegaJsonTimes {
-	private List<String> url = new ArrayList<String>();
-	private JSONObject json;
-	private List<JSONObject> jsons = new ArrayList<JSONObject>();
 
-	public void addUrl(String url) {
-		this.url.add(url);
-	}
+    private List<String> url = new ArrayList<String>();
+    private JSONObject json;
+    private List<JSONObject> jsons = new ArrayList<JSONObject>();
 
-	public void geraJson() throws JSONException, IOException {
-		for (int i = 0; i < url.size(); i++) {
-			URL url;
-			try {
-				url = new URL(this.url.get(i));
+    public void addUrl(String url) {
+        this.url.add(url);
+    }
 
-				BufferedReader in = new BufferedReader(new InputStreamReader(url.openStream()));
+    public void geraJson() throws JSONException, IOException {
+        for (int i = 0; i < url.size(); i++) {
+            URL url;
+            try {
+                url = new URL(this.url.get(i));
 
-				String inputLine;
+                BufferedReader in = new BufferedReader(new InputStreamReader(url.openStream()));
 
-				while ((inputLine = in.readLine()) != null) {
-					json = new JSONObject(inputLine);
-					jsons.add(json);
-				}
+                String inputLine;
 
-			} catch (MalformedURLException e) {
-				System.out.println("Esta API não é valida");
-			}
-		}
-	}
+                while ((inputLine = in.readLine()) != null) {
+                    json = new JSONObject(inputLine);
+                    jsons.add(json);
+                }
 
-	public List<JSONObject> getJsons() {
-		return jsons;
-	}
+            } catch (MalformedURLException e) {
+                System.out.println("Esta API não é valida");
+            }
+        }
+    }
+
+    public List<JSONObject> getJsons() {
+        return jsons;
+    }
 }

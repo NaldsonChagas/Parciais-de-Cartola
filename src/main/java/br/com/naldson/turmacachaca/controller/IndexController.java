@@ -21,49 +21,50 @@ import br.com.naldson.turmacachaca.util.PegaJsonTimes;
 @Controller
 public class IndexController {
 
-	private PegaJsonTimes jsonTimes;
-	private Liga liga;
-	private ArrayList<Time> times = new ArrayList<Time>();
-	private Result result;
-	private CalculaParciais parciais;
+    private PegaJsonTimes jsonTimes;
+    private Liga liga;
+    private ArrayList<Time> times = new ArrayList<Time>();
+    private Result result;
+    private CalculaParciais parciais;
 
-	@Inject
-	public IndexController(PegaJsonTimes jsonTimes, Liga liga, CalculaParciais parciais, Result result) {
-		this.jsonTimes = jsonTimes;
-		this.liga = liga;
-		this.parciais = parciais;
-		this.result = result;
-	}
+    @Inject
+    public IndexController(PegaJsonTimes jsonTimes, Liga liga, CalculaParciais parciais, Result result) {
+        this.jsonTimes = jsonTimes;
+        this.liga = liga;
+        this.parciais = parciais;
+        this.result = result;
+    }
 
-	@Deprecated
-	public IndexController() {
-	}
+    @Deprecated
+    public IndexController() {
+    }
 
-	@Path(value = "/", priority = 1)
-	@Get
-	public void index() throws IOException {
+    @Path(value = "/", priority = 1)
+    @Get
+    public void index() throws IOException {
 
-		for (String url : liga.getTimes()) {
-			jsonTimes.addUrl(url);
-		}
-		jsonTimes.geraJson();
-		for (JSONObject j : jsonTimes.getJsons()) {
-			ArrayList<Jogadores> jogadores = GeraTimes.adicionaJogadores(j);
-			Time time = GeraTimes.converteJsonParaTimes(j, jogadores);
+        for (String url : liga.getTimes()) {
+            jsonTimes.addUrl(url);
+        }
+        jsonTimes.geraJson();
+        for (JSONObject j : jsonTimes.getJsons()) {
+            ArrayList<Jogadores> jogadores = GeraTimes.adicionaJogadores(j);
+            Time time = GeraTimes.converteJsonParaTimes(j, jogadores);
 
-			if (parciais.pegaParciais()) {
-				parciais.calculaParciais(time);
-				time.setPontos(parciais.getParcial());
-			} else {
-				result.redirectTo(this).index2();
-			}
-			times.add(time);
-		}
-		result.include("times", times);
-	}
+            if (parciais.pegaParciais()) {
+                parciais.calculaParciais(time);
+                time.setPontos(parciais.getParcial());
+                parciais.setParcial(0);
+            } else {
+                result.redirectTo(this).index2();
+            }
+            times.add(time);
+        }
+        result.include("times", times);
+    }
 
-	@Path("mercado-indisponivel")
-	public void index2() {
+    @Path("mercado-indisponivel")
+    public void index2() {
 
-	}
+    }
 }

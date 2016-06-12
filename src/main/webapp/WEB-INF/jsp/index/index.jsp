@@ -44,7 +44,7 @@
                             <td><img src="${t.escudoSvg}" width="65px" /></td>
                             <td><strong>${t.nome}</strong></td>
                             <td><strong>${t.nomeJogador}</strong></td>
-                            <td><strong style="color: green;">${t.pontos}</strong></td>
+                            <td><strong style="color: green;">${t.formatPontos}</strong></td>
                         </tr>
                     </c:forEach>
                 </tbody>

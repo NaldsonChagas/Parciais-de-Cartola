@@ -17,13 +17,15 @@ import br.com.naldson.turmacachaca.model.Time;
 import br.com.naldson.turmacachaca.util.CalculaParciais;
 import br.com.naldson.turmacachaca.util.GeraTimes;
 import br.com.naldson.turmacachaca.util.PegaJsonTimes;
+import java.util.Collections;
+import java.util.List;
 
 @Controller
 public class IndexController {
 
     private PegaJsonTimes jsonTimes;
     private Liga liga;
-    private ArrayList<Time> times = new ArrayList<Time>();
+    private List<Time> times = new ArrayList<Time>();
     private Result result;
     private CalculaParciais parciais;
 
@@ -59,6 +61,7 @@ public class IndexController {
                 result.redirectTo(this).index2();
             }
             times.add(time);
+            Collections.sort(times);
         }
         result.include("times", times);
     }

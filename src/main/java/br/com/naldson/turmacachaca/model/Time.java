@@ -4,11 +4,11 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Time {
+public class Time implements Comparable<Time> {
 
-    private String nome;
-    private String escudoSvg;
-    private String nomeJogador;
+    private final String nome;
+    private final String escudoSvg;
+    private final String nomeJogador;
     private double pontos;
     private List<Jogadores> jogadores = new ArrayList<Jogadores>(11);
 
@@ -30,9 +30,13 @@ public class Time {
         return nomeJogador;
     }
 
-    public String getPontos() {
+    public String getFormatPontos() {
         DecimalFormat formatter = new DecimalFormat("#0.00");
         return formatter.format(this.pontos);
+    }
+
+    public double getPontos() {
+        return pontos;
     }
 
     public void setPontos(double pontos) {
@@ -45,5 +49,12 @@ public class Time {
 
     public void setJogadores(List<Jogadores> jogadores) {
         this.jogadores = jogadores;
+    }
+
+    public int compareTo(Time outro) {
+        if (outro.getPontos() > getPontos()) {
+            return 1;
+        }
+        return -1;
     }
 }

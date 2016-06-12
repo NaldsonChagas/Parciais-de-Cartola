@@ -34,8 +34,8 @@
                     <tr>
                         <th>Escudo</th>
                         <th>Time</th>
-                        <th>Cartoleiro</th>
-                        <th>Pontuação</th>
+                        <th>Jogador</th>
+                        <th>Parcial</th>
                     </tr>
                 </thead>
 
@@ -54,7 +54,7 @@
     </div>
     <footer>
         <h4 class="h4" style="color: white">
-            Desenvolvido por: <u>Naldson</u>
+            Desenvolvido por: <a href="mailto:naldson.bc@gmail.com"><u>Naldson Chagas</u></a>
         </h4>
     </footer>
 </body>

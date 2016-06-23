@@ -24,6 +24,7 @@ public final class Liga {
         times.put("25-de-dezembro-f-c", "https://api.cartolafc.globo.com/time/25-de-dezembro-f-c");
         times.put("denismengao", "https://api.cartolafc.globo.com/time/denismengao");
         times.put("atletic-de-esparta", "https://api.cartolafc.globo.com/time/atletic-de-esparta");
+        times.put("crtorquato", "https://api.cartolafc.globo.com/time/crtorquato");
     }
 
     public HashMap<String, String> getTimes() {

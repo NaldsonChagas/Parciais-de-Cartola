@@ -11,11 +11,13 @@ public class Time implements Comparable<Time> {
     private final String nomeJogador;
     private double pontos;
     private List<Jogadores> jogadores = new ArrayList<Jogadores>(11);
+    private String slug;
 
-    public Time(String nome, String escudoSvg, String nomeJogador) {
+    public Time(String nome, String escudoSvg, String nomeJogador, String slug) {
         this.nome = nome;
         this.escudoSvg = escudoSvg;
         this.nomeJogador = nomeJogador;
+        this.slug = slug;
     }
 
     public String getNome() {
@@ -49,6 +51,14 @@ public class Time implements Comparable<Time> {
 
     public void setJogadores(List<Jogadores> jogadores) {
         this.jogadores = jogadores;
+    }
+
+    public String getSlug() {
+        return slug;
+    }
+
+    public void setSlug(String slug) {
+        this.slug = slug;
     }
 
     public int compareTo(Time outro) {

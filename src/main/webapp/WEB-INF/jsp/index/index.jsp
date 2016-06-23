@@ -18,8 +18,8 @@
             <tbody>
             <c:forEach var="t" items="${times}">
                 <tr>
-                    <td><img src="${t.escudoSvg}" width="50px" /></td>
-                    <td><strong>${t.nome}</strong></td>
+                    <td><a href="times/${t.slug}"><img src="${t.escudoSvg}" width="50px" /></a></td>
+                    <td><a href="times/${t.slug}"><strong>${t.nome}</strong></a></td>
                     <td><strong>${t.nomeJogador}</strong></td>
                     <td><strong style="color: green;">${t.formatPontos}</strong></td>
                 </tr>

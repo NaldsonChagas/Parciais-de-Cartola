@@ -14,8 +14,9 @@ public class GeraTimes {
         String nome = json.getJSONObject("time").getString("nome");
         String escudoSvg = json.getJSONObject("time").getString("url_escudo_svg");
         String nomeJogador = json.getJSONObject("time").getString("nome_cartola");
+        String slug = json.getJSONObject("time").getString("slug");
 
-        Time time = new Time(nome, escudoSvg, nomeJogador);
+        Time time = new Time(nome, escudoSvg, nomeJogador, slug);
         time.setJogadores(jogadores);
         return time;
     }

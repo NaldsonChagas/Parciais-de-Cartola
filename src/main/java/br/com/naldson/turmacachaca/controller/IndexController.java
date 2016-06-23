@@ -17,6 +17,7 @@ import br.com.naldson.turmacachaca.model.Time;
 import br.com.naldson.turmacachaca.util.CalculaParciais;
 import br.com.naldson.turmacachaca.util.GeraTimes;
 import br.com.naldson.turmacachaca.util.PegaJsonTimes;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
@@ -25,33 +26,38 @@ public class IndexController {
 
     private PegaJsonTimes jsonTimes;
     private Liga liga;
-    private List<Time> times = new ArrayList<Time>();
+    private final List<Time> times;
     private Result result;
     private CalculaParciais parciais;
+    private Time time;
 
     @Inject
     public IndexController(PegaJsonTimes jsonTimes, Liga liga, CalculaParciais parciais, Result result) {
+        this.times = new ArrayList<Time>();
         this.jsonTimes = jsonTimes;
         this.liga = liga;
         this.parciais = parciais;
         this.result = result;
     }
 
-    @Deprecated
     public IndexController() {
+        this.times = new ArrayList<Time>();
     }
 
     @Path(value = "/", priority = 1)
     @Get
     public void index() throws IOException {
 
-        for (String url : liga.getTimes()) {
+        Collection<String> urls = liga.getTimes().values();
+
+        for (String url : urls) {
             jsonTimes.addUrl(url);
         }
+
         jsonTimes.geraJson();
         for (JSONObject j : jsonTimes.getJsons()) {
             ArrayList<Jogadores> jogadores = GeraTimes.adicionaJogadores(j);
-            Time time = GeraTimes.converteJsonParaTimes(j, jogadores);
+            time = GeraTimes.converteJsonParaTimes(j, jogadores);
 
             if (parciais.pegaParciais()) {
                 parciais.calculaParciais(time);
@@ -68,6 +74,5 @@ public class IndexController {
 
     @Path("mercado-indisponivel")
     public void index2() {
-
     }
 }

@@ -13,12 +13,12 @@ public final class Liga {
 
     public void adicionaTimes() {
         times.put("ssc-napoleza", "https://api.cartolafc.globo.com/time/ssc-napoleza");
-        times.put("Turmada-resenha-fc", "https://api.cartolafc.globo.com/time/Turmada-resenha-fc");
-        times.put("IkarosGrill-FC", "https://api.cartolafc.globo.com/time/IkarosGrill-FC");
-        times.put("FEC18-EC", "https://api.cartolafc.globo.com/time/FEC18-EC");
-        times.put("Rio-Negro-Fcm", "https://api.cartolafc.globo.com/time/Rio-Negro-Fcm");
-        times.put("Spartacus-1000", "https://api.cartolafc.globo.com/time/Spartacus-1000");
-        times.put("Real-mdg-fc", "https://api.cartolafc.globo.com/time/Real-mdg-fc");
+        times.put("turmada-resenha-fc", "https://api.cartolafc.globo.com/time/Turmada-resenha-fc");
+        times.put("ikarosGrill-fc", "https://api.cartolafc.globo.com/time/IkarosGrill-FC");
+        times.put("fec18-ec", "https://api.cartolafc.globo.com/time/FEC18-EC");
+        times.put("rio-negro-fcm", "https://api.cartolafc.globo.com/time/Rio-Negro-Fcm");
+        times.put("spartacus-1000", "https://api.cartolafc.globo.com/time/Spartacus-1000");
+        times.put("real-mdg-fc", "https://api.cartolafc.globo.com/time/Real-mdg-fc");
         times.put("six-nations-fc", "https://api.cartolafc.globo.com/time/six-nations-fc");
         times.put("elieel-fc", "https://api.cartolafc.globo.com/time/elieel-fc");
         times.put("25-de-dezembro-f-c", "https://api.cartolafc.globo.com/time/25-de-dezembro-f-c");

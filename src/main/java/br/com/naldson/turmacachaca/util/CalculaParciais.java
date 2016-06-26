@@ -30,6 +30,7 @@ public class CalculaParciais {
                 JSONObject atleta = (JSONObject) json.get(j.getId().toString());
 
                 double pontos = Double.valueOf(atleta.get("pontuacao").toString());
+                j.setPontos(pontos);
                 this.parcial += pontos;
             }
         }

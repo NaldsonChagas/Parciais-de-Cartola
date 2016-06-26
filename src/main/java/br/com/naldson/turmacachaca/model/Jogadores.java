@@ -40,6 +40,10 @@ public class Jogadores implements Comparable<Jogadores> {
         return pontos;
     }
 
+    public void setPontos(double pontos) {
+        this.pontos = pontos;
+    }
+
     public int getPosicaoId() {
         return posicaoId;
     }

@@ -1,6 +1,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <c:import url="../_comum/header.jsp"></c:import>
-    <br><br>
+    <br>
     <section class="center text-center">
         <img src="${time.escudoSvg}" width="90px"/>
     <h2>${time.nome}</h2>

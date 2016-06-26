@@ -14,7 +14,7 @@ public final class Liga {
     public void adicionaTimes() {
         times.put("ssc-napoleza", "https://api.cartolafc.globo.com/time/ssc-napoleza");
         times.put("turmada-resenha-fc", "https://api.cartolafc.globo.com/time/Turmada-resenha-fc");
-        times.put("ikarosGrill-fc", "https://api.cartolafc.globo.com/time/IkarosGrill-FC");
+        times.put("ikarosgrill-fc", "https://api.cartolafc.globo.com/time/IkarosGrill-FC");
         times.put("fec18-ec", "https://api.cartolafc.globo.com/time/FEC18-EC");
         times.put("rio-negro-fcm", "https://api.cartolafc.globo.com/time/Rio-Negro-Fcm");
         times.put("spartacus-1000", "https://api.cartolafc.globo.com/time/Spartacus-1000");

@@ -4,7 +4,7 @@
 
     <groupId>br.com.naldson</groupId>
     <artifactId>turmacachaca</artifactId>
-    <version>1.1.0</version>
+    <version>2.0.0</version>
     <packaging>war</packaging>
 
     <description>Sistema de ranking da liga Turma da Cachaça do Fantasy Game Cartola FC</description>

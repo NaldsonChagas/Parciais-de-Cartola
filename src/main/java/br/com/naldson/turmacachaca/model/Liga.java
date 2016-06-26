@@ -25,6 +25,9 @@ public final class Liga {
         times.put("denismengao", "https://api.cartolafc.globo.com/time/denismengao");
         times.put("atletic-de-esparta", "https://api.cartolafc.globo.com/time/atletic-de-esparta");
         times.put("crtorquato", "https://api.cartolafc.globo.com/time/crtorquato");
+        times.put("igor-ceara-fc", "https://api.cartolafc.globo.com/time/igor-ceara-fc");
+        times.put("joec", "https://api.cartolafc.globo.com/time/joec");
+        times.put("fortaleza-tsc", "https://api.cartolafc.globo.com/time/fortaleza-tsc");
     }
 
     public HashMap<String, String> getTimes() {

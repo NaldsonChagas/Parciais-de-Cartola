@@ -1,4 +1,4 @@
-package br.com.naldson.turmacachaca.model;
+package br.com.naldson.parciaiscartola.model;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;

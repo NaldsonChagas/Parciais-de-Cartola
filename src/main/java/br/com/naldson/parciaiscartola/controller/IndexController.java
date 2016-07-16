@@ -1,4 +1,4 @@
-package br.com.naldson.turmacachaca.controller;
+package br.com.naldson.parciaiscartola.controller;
 
 import java.io.IOException;
 
@@ -6,8 +6,8 @@ import br.com.caelum.vraptor.Controller;
 import br.com.caelum.vraptor.Get;
 import br.com.caelum.vraptor.Path;
 import br.com.caelum.vraptor.Result;
-import br.com.naldson.turmacachaca.model.Time;
-import br.com.naldson.turmacachaca.util.GeraTimes;
+import br.com.naldson.parciaiscartola.model.Time;
+import br.com.naldson.parciaiscartola.util.GeraTimes;
 import java.util.List;
 import javax.inject.Inject;
 

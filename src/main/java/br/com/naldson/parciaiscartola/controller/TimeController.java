@@ -1,14 +1,14 @@
-package br.com.naldson.turmacachaca.controller;
+package br.com.naldson.parciaiscartola.controller;
 
 import br.com.caelum.vraptor.Controller;
 import br.com.caelum.vraptor.Get;
 import br.com.caelum.vraptor.Result;
-import br.com.naldson.turmacachaca.model.Jogadores;
-import br.com.naldson.turmacachaca.model.Liga;
-import br.com.naldson.turmacachaca.model.Time;
-import br.com.naldson.turmacachaca.util.CalculaParciais;
-import br.com.naldson.turmacachaca.util.GeraTimes;
-import br.com.naldson.turmacachaca.util.PegaJsonTimes;
+import br.com.naldson.parciaiscartola.model.Jogadores;
+import br.com.naldson.parciaiscartola.model.Liga;
+import br.com.naldson.parciaiscartola.model.Time;
+import br.com.naldson.parciaiscartola.util.CalculaParciais;
+import br.com.naldson.parciaiscartola.util.GeraTimes;
+import br.com.naldson.parciaiscartola.util.PegaJsonTimes;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;

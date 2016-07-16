@@ -1,4 +1,4 @@
-package br.com.naldson.turmacachaca.util;
+package br.com.naldson.parciaiscartola.util;
 
 import java.io.BufferedReader;
 import java.io.IOException;

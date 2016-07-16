@@ -1,12 +1,12 @@
-package br.com.naldson.turmacachaca.util;
+package br.com.naldson.parciaiscartola.util;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import org.json.JSONObject;
 
-import br.com.naldson.turmacachaca.model.Jogadores;
-import br.com.naldson.turmacachaca.model.Time;
+import br.com.naldson.parciaiscartola.model.Jogadores;
+import br.com.naldson.parciaiscartola.model.Time;
 
 public class CalculaParciais {
 

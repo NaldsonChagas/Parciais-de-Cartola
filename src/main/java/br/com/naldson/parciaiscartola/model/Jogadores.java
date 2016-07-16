@@ -1,4 +1,4 @@
-package br.com.naldson.turmacachaca.model;
+package br.com.naldson.parciaiscartola.model;
 
 public class Jogadores implements Comparable<Jogadores> {
 

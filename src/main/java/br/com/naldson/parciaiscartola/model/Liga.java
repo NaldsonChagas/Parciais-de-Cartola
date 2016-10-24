@@ -28,6 +28,7 @@ public final class Liga {
         times.put("igor-ceara-fc", "https://api.cartolafc.globo.com/time/igor-ceara-fc");
         times.put("joec", "https://api.cartolafc.globo.com/time/joec");
         times.put("fortaleza-tsc", "https://api.cartolafc.globo.com/time/fortaleza-tsc");
+        times.put("tricolor-tuta-fc", "https://api.cartolafc.globo.com/time/tricolor-tuta-f-c");
     }
 
     public HashMap<String, String> getTimes() {

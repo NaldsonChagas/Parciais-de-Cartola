@@ -1,4 +1,2 @@
 # Parciais Liga - Cartola FC
-Site criado para auxilio dos participantes Liga da cachaÃ§a no cartola FC
-
-Page: http://cachacafc-cartola.rhcloud.com/
+Site criado para verificação de parciais no fantasy game Cartola FC
